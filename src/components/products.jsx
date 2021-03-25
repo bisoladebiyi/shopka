@@ -10,13 +10,13 @@ const Products = ({ product }) => {
                 
                     {product.map((product) => (    
                         <div className="product-preview" key={product.id}>
-                            <a href="">
+                            <Link to={`/products/${product.id}`}>
                                 <img src={product.img} alt=""/>
                                 <p>{product.desc}</p>
                                 <p>{product.price}</p>
                                 <p>{product.info}</p>
                                 <button><img src={heart} alt=""/> Watch</button>
-                            </a>
+                            </Link>
                              
                         </div>
                     ))}
